@@ -1,0 +1,7 @@
+<header class="accordion-header" (click)="toggleExpanded()">
+	<h4 class="subheader">{{ title }}</h4>
+</header>
+<div class="accordion-content"
+	[class.hidden]="!expanded">
+	<ng-content></ng-content>
+</div>

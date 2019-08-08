@@ -1,0 +1,93 @@
+:host(.disabled) {
+  pointer-events: none;
+}
+
+.toolbar-item {
+  padding: 0.375rem 1rem;
+  white-space: nowrap;
+  color: var(--color-base);
+  display: block;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  position: relative;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+a.toolbar-item:hover, a.toolbar-item.is-active,
+a.toolbar-link:hover,
+a.toolbar-link.is-active {
+  background-color: var(--color-light-light);
+  color: var(--color-primary);
+}
+
+.toolbar-item[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.toolbar-item img {
+  max-height: 1rem;
+  max-width: 1rem;
+}
+
+.toolbar-item .icon {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.toolbar-item .icon .symbol,
+.toolbar-item .icon img {
+  position: relative;
+  top: 0.15rem;
+}
+
+
+a.toolbar-item {
+  padding-right: 3rem;
+}
+
+a.toolbar-item:hover {
+  background-color: var(--color-light);
+  color: var(--color-base);
+}
+
+a.toolbar-item.is-active {
+  background-color: var(--color-primary-light);
+  color: var(--color-light-light);
+}
+
+a.toolbar-item.is-active:hover {
+  background-color: var(--color-primary);
+}
+
+a.toolbar-item.is-active:not(:hover),
+a.toolbar-link.is-active:not(:hover) {
+  background-color: var(--color-primary-light);
+}
+
+.state {
+  display: inline-block;
+  border-radius: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 1rem;
+}
+
+.state.square {
+  border-radius: 0;
+}
+
+.state.circle {
+  border-radius: 50%;
+}
+
+.state.sidebar {
+  position: absolute;
+  height: 2.3rem;
+  width: 0.25rem;
+  left: 0;
+  top: 0;
+  border-radius: 0;
+}

@@ -1,0 +1,60 @@
+:host {
+    display: flex;
+}
+
+.toolbar {
+    background-color: var(--color-light);
+    min-height: 3.25rem;
+    width: 100%;
+}
+
+.toolbar.is-small {
+    min-height: 1.625rem;
+}
+
+:host :host-context(.vertical-container) .toolbar {
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.toolbar.has-shadow {
+    box-shadow: 0 0.1rem 0.15rem var(--color-base-transparent-10);
+}
+
+.toolbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.toolbar,
+.toolbar-menu,
+.toolbar-start,
+.toolbar-end {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.toolbar-start {
+    justify-content: flex-start;
+}
+
+.toolbar-end {
+    justify-content: flex-end;
+}
+
+.toolbar.is-dark {
+    background-color: var(--color-base-light);
+}
+
+.toolbar.is-light {
+    background-color: var(--color-light-light);
+}
+
+.toolbar-menu.reverse {
+	flex-direction: row-reverse;
+}
+
+.toolbar-menu.vertical {
+    flex-direction: column;
+}

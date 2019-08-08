@@ -1,0 +1,16 @@
+<div
+    class="notification"
+    [class.is-info]="context === UIContext.Information"
+    [class.is-success]="context === UIContext.Success"
+    [class.is-warning]="context === UIContext.Warning"
+    [class.is-danger]="context === UIContext.Danger">
+    <h4>{{ title }}</h4>
+    <a class="close-notification">
+        <span class="icon">
+            <i class="symbol close"></i>
+        </span>
+    </a>
+    <div class="content">
+        {{ message }}
+    </div>
+</div>

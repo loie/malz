@@ -1,0 +1,307 @@
+:host {
+    display: grid;
+    grid-template-columns: [icon] auto [input] 1fr;
+    grid-template-rows: 1fr;
+}
+
+.icon {
+    grid-column: icon;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.icon i.symbol{
+    font-size: var(--font-size-large);
+}
+
+.field {
+    grid-column: input;
+}
+
+label, input, textarea {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+.input,
+.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: none;
+    border-bottom: 0.1rem solid var(--color-base-light);
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+    background-color: transparent;
+    border-color: #dbdbdb;
+    color: #363636;
+    box-shadow: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+input, textarea  {
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+}
+
+input:focus, textarea:focus {
+    outline: 0;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+}
+
+.input:hover, .input.is-hovered,
+.textarea:hover,
+.textarea.is-hovered {
+    border-color: var(--color-primary);
+}
+
+.input:focus, .input.is-focused, .input:active, .input.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+input[type=range] {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-range-track {
+    height: 0.1rem;
+    cursor: pointer;
+    animate: 0.2s;
+    background: var(--color-medium);
+    border-radius: 1.3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border-radius: 50%;
+    box-shadow: 0 0.05rem 0.1rem var(--color-base-transparent-10);
+    border: 0.05rem solid var(--color-base);
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--color-light);
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+    background-image: none;
+    background-color: var(--color-light-light);
+}
+
+
+label {
+    font-weight: 400;
+    color: var(--color-medium);
+}
+
+label.checkbox,
+label.radio {
+    color: var(--color-base);
+}
+
+.checkbox,
+.radio {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.25;
+    position: relative;
+}
+
+.control {
+    font-size: 1rem;
+    text-align: left;
+}
+
+label sup {
+    color: var(--color-danger-light);
+}
+
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+    cursor: text;
+    pointer-events: none;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2rem) scale(1.25);
+    color: var(--color-medium-light);
+}
+
+::-moz-placeholder {
+    opacity: 0;
+    transition: inherit;
+    color: var(--color-medium);
+}
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+    color: var(--color-medium);
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label,
+textarea:not(:placeholder-shown) + label,
+textarea:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+    color: var(--color-medium);
+}
+
+input:focus + label,
+textarea:focus + label {
+    color: var(--color-primary);
+}
+
+textarea:not([rows]) {
+    max-height: 600px;
+    min-height: 120px;
+}
+
+.input.is-info:focus,
+.textarea.is-info:focus,
+.input.is-success:focus,
+.textarea.is-success:focus,
+.input.is-warning:focus,
+.textarea.is-warning:focus,
+.input.is-danger:focus,
+.textarea.is-danger:focus {
+    box-shadow: none;
+}
+
+.input.is-info:focus + label,
+.textarea.is-info:focus + label,
+.input.is-success:focus + label,
+.textarea.is-success:focus + label,
+.input.is-warning:focus + label,
+.textarea.is-warning:focus + label,
+.input.is-danger:focus + label,
+.textarea.is-danger:focus + label {
+    box-shadow: none;
+}
+
+.input.is-info {
+    border-color: var(--color-info);
+}
+
+.input.is-info:focus {
+    border-color: var(--color-info-dark);
+}
+
+.input.is-info:focus + label,
+.textarea.is-info:focus + label {
+    color: var(--color-info);
+}
+
+.input.is-success {
+    border-color: var(--color-success);
+}
+
+.input.is-success:focus {
+    border-color: var(--color-success-dark);
+}
+
+.input.is-success:focus + label,
+.textarea.is-success:focus + label {
+    color: var(--color-success);
+}
+
+.input.is-warning {
+    border-color: var(--color-warning);
+}
+
+.input.is-warning:focus {
+    border-color: var(--color-warning-dark);
+}
+
+.input.is-warning:focus + label,
+.textarea.is-warning:focus + label {
+    color: var(--color-warning);
+}
+
+.input.is-danger {
+    border-color: var(--color-danger);
+}
+
+.input.is-danger:focus {
+    border-color: var(--color-danger-dark);
+}
+
+.input.is-danger:focus + label,
+.textarea.is-danger:focus + label {
+    color: var(--color-danger);
+}
+
+.input[disabled],
+.textarea[disabled],
+.input.is-disabled,
+.textarea.is-disabled {
+    color: var(--color-medium);
+    border-color: var(--color-medium-light);
+    background-color: transparent;
+}
+
+
+.input[disabled]:hover,
+.textarea[disabled]:hover,
+.input.is-disabled:hover,
+.textarea.is-disabled:hover {
+    border-color: var(--color-medium-light);
+}
+
+.input.is-disabled:focus + label,
+.textarea.is-disabled:focus + label {
+    color: var(--color-medium);
+}

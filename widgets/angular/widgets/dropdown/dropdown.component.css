@@ -1,0 +1,122 @@
+/*** SHARED BY MANY COMPONENTS -- DO A FULLTEXT SEARCH & REPLACE IF YOU CHANGE THIS! ***/
+.closing-background {
+	background-color: transparent;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 15;
+}
+/*** END of SHARED BY MANY COMPONENTS **************************************************/
+
+
+:host {
+    display: grid;
+    grid-template-columns: [icon] auto [input] 1fr;
+    grid-template-rows: 1fr;
+}
+
+.icon {
+    grid-column: icon;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.icon i.symbol {
+    font-size: var(--font-size-large);
+}
+
+.field {
+    grid-column: input;
+}
+
+.dropdown {
+    display: inline-flex;
+    position: relative;
+    vertical-align: top;
+}
+
+label {
+    font-weight: 400;
+    color: var(--color-medium);
+}
+
+.field .control .dropdown,
+.field .control .dropdown .dropdown-trigger,
+.field .control .dropdown .dropdown-trigger .button {
+    width: 100%;
+}
+
+.dropdown.is-active .dropdown-menu,
+.dropdown.is-hoverable:hover .dropdown-menu {
+    display: block;
+}
+
+
+.dropdown.is-right .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.dropdown.is-up .dropdown-menu {
+    bottom: 100%;
+    padding-bottom: 4px;
+    padding-top: unset;
+    top: auto;
+}
+
+.dropdown-menu {
+    display: none;
+    left: 0;
+    min-width: 12rem;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+}
+
+.field .control .dropdown .dropdown-menu {
+    width: 100%;
+}
+
+:host :host-context(.breadcrumb) .field .control .dropdown .dropdown-menu {
+    width: auto;
+}
+
+.dropdown-content {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 0.125em  0.25em var(--color-base-transparent-10);
+    border: 0.05rem solid var(--color-medium-light);
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    max-height: 40vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.help.is-primary {
+    color: var(--color-primary);
+}
+
+.help.is-success {
+    color: var(--color-success);
+}
+
+.help.is-warning {
+    color: var(--color-warning);
+}
+
+.help.is-danger {
+    color: var(--color-danger);
+}
+
+:host :host-context(.ugly) {
+    height: 100%;
+}
+
+.invisible {
+    opacity: 0;
+}

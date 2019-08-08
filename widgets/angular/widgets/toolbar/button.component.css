@@ -1,0 +1,109 @@
+:host {
+    display: flex;
+    align-items: stretch;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    color: var(--color-base);
+    line-height: 1.5;
+    border-radius: 0;
+
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    background-color: transparent;
+    background-image: none;
+    border-style: none;
+    transition-duration: 0s;
+}
+
+:host :host-context(.is-small) .button {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button:hover,
+.button.is-active {
+    background-image: none;
+    background-color: var(--color-light-light);
+    box-shadow: none;
+}
+
+.button.is-active {
+    color: var(--color-primary);
+}
+
+.button img {
+    max-height: 1.75rem;
+}
+
+.button .icon + span {
+    margin-left: 0.5rem;
+}
+
+.button.is-active {
+    color: var(--color-base);
+}
+
+.button.is-active:not(:hover) {
+    background-color: var(--color-primary-light);
+}
+
+
+:host :host-context(.is-dark) .button {
+    color: var(--color-light);
+}
+
+
+:host :host-context(.is-dark) .button:hover,
+:host :host-context(.is-dark) .button.is-active {
+    background-color: var(--color-base);
+}
+
+:host :host-context(.is-dark) .button.is-active {
+    color: var(--color-light-light);
+    background-color: var(--color-primary-light);
+}
+
+
+:host :host-context(.is-dark) .button.is-active:hover {
+    color: var(--color-light-light);
+    background-color: var(--color-primary);
+}
+
+:host :host-context(.is-dark) .button.is-active:not(:hover) {
+    background-color: var(--color-primary-light);
+}
+
+.button[disabled],
+:host :host-context(.is-dark) .button[disabled] {
+    background-color: transparent;
+}
+
+.button[disabled] {
+    color: var(--color-medium-light);
+}
+
+:host :host-context(.is-dark) .button[disabled] {
+    opacity: 0.5;
+
+}
+
+:host :host-context(.toolbar-link) .button {
+    padding-right: 0;
+}
+
+:host :host-context(.vertical-container) .button {
+    border-bottom-right-radius: var(--border-radius);
+}

@@ -1,0 +1,35 @@
+<ng-container *ngIf="label !== '---'; else divider">
+	<a
+		class="dropdown-item"
+		[class.has-submenu]="items && items.length > 0"
+		[attr.href]="target ? target : null"
+		[attr.target]="openinnew ? '_blank': null"
+		[attr.disabled]="disabled ? true : null"
+		[class.is-active]="active"
+		(click)="fireEvent($event)">
+		<span *ngIf="icon" class="icon" [tmInlineSVG]="icon"></span>
+		<span
+			*ngIf="color"
+			class="state"
+			[class.circle]="markerType === MarkerType.Circle ? true : false"
+			[class.square]="markerType === MarkerType.Square ? true : false"
+			[class.sidebar]="markerType === MarkerType.Sidebar ? true : false"
+			[style.background-color]="color"></span>
+		<span *ngIf="label">{{ label }}</span>
+	</a>
+	<div class="submenu dropdown-menu" *ngIf="items && items.length > 0" [style.transform]="submenuPosition">
+		<tm-contextmenu-item
+			*ngFor="let subitem of items"
+			[label]="subitem.label"
+			[title]="subitem.title === undefined ? '' : subitem.title"
+			[icon]="subitem.icon"
+			[target]="subitem.target"
+			[action]="subitem.action"
+			[items]="subitem.items"
+			(itemClicked)="fireEvent($event)">
+		</tm-contextmenu-item>
+	</div>
+</ng-container>
+<ng-template #divider>
+	<hr class="dropdown-divider" />
+</ng-template>

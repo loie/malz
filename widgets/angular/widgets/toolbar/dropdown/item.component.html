@@ -1,0 +1,28 @@
+<ng-container *ngIf="icon || label; else noicon">
+	<a
+		class="toolbar-item"
+		[attr.href]="target ? target : null"
+		[attr.target]="openinnew ? '_blank': null"
+		[attr.disabled]="disabled ? true : null"
+		[class.is-active]="active"
+		(click)="fireEvent($event)">
+		<ng-container *ngIf="icon">
+			<span class="icon" [tmInlineSVG]="icon"></span>
+		</ng-container>
+		<span
+			*ngIf="color"
+			class="state"
+			[class.circle]="markerType === MarkerType.Circle ? true : false"
+			[class.square]="markerType === MarkerType.Square ? true : false"
+			[class.sidebar]="markerType === MarkerType.Sidebar ? true : false"
+			[style.background-color]="color"></span>
+		<span *ngIf="label">{{ label }}</span>
+	</a>
+</ng-container>
+<ng-template #noicon>
+	<div
+		*ngIf="!label && !icon"
+		class="toolbar-item">
+		<ng-content></ng-content>
+	</div>
+</ng-template>

@@ -1,0 +1,9 @@
+.field.default {
+	flex-flow: initial;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.field.reverse {
+	flex-direction: row-reverse;
+}

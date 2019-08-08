@@ -1,0 +1,90 @@
+.notification {
+	display: grid;
+	grid-template-columns: [content] 1fr [actions] 1em;
+	grid-template-rows: [main] 1fr;
+	border: 0.05rem solid var(--color-medium-light);
+	background-color: var(--color-light-light);
+	background-image: var(--gradient-light);
+	border-radius: 3px;
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+	box-shadow: 0 0.125em  0.25em var(--color-base-transparent);
+	height: 6rem;
+	transition: var(--duration-short) opacity ease-out, var(--duration-medium) transform ease-out;
+	opacity: 100%;
+	transform: none;
+	will-change: opacity, transform;
+}
+
+.notification.is-fading {
+	opacity: 0;
+}
+
+.notification.has-hiding-sibling {
+	transform: translateY(-7rem);
+}
+
+.notification + .notification {
+	margin-top: 1rem;
+}
+
+.notification .close-notification {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	grid-column: action;
+	width: 100%;
+	height: 100%;
+	color: var(--color-base);
+}
+
+.notification h4 {
+	grid-column: content;
+}
+
+.notification .content {
+	grid-column: content;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 3rem;
+}
+
+.notification.is-info,
+.notification.is-info .close-notification,
+.notification.is-success,
+.notification.is-success .close-notification,
+.notification.is-danger,
+.notification.is-danger .close-notification,
+.notification.is-dark,
+.notification.is-dark .close-notification {
+	color: var(--color-light-light);
+}
+
+.notification.is-info {
+	border-color: var(--color-info-dark);
+	background-image: var(--gradient-info);
+	background-color: var(--color-info);
+}
+
+.notification.is-success {
+	border-color: var(--color-success-dark);
+	background-image: var(--gradient-success);
+	background-color: var(--color-success);
+}
+
+.notification.is-warning {
+	border-color: var(--color-warning-dark);
+	background-image: var(--gradient-warning);
+	background-color: var(--color-warning);
+}
+
+.notification.is-danger {
+	border-color: var(--color-danger-dark);
+	background-image: var(--gradient-danger);
+	background-color: var(--color-danger);
+}
+
+.notification.is-dark {
+	border-color: var(--color-base);
+	background-image: var(--gradient-base);
+	background-color: var(--color-base);	
+}

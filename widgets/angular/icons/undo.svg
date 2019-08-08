@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933334"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata14711">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     class="base"
+     d="M 3.3127259,5.7613033 A 5.8208337,5.8208337 0 0 1 10.479497,3.0049256 5.8208337,5.8208337 0 0 1 14.143626,9.7528428 5.8208337,5.8208337 0 0 1 7.928948,14.262611"
+     id="path16533"
+     style="opacity:1;fill:none;fill-opacity:1;stroke-width:1.0583334;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <g
+     transform="rotate(-6.7773827,-17.15273,49.857574)"
+     id="g16546">
+    <g
+       id="g16541"
+       transform="rotate(-0.09125972,1785.391,-2484.4715)">
+      <path
+         class="base"
+         id="path16535"
+         d="m 3.9682051,6.1615747 4.233328,0.00674"
+         style="fill:none;fill-rule:evenodd;stroke-width:1.0583334;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         class="base"
+         style="fill:none;fill-rule:evenodd;stroke-width:1.0583334;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 3.9682051,6.1615747 0.00674,-4.233328"
+         id="path16537" />
+    </g>
+  </g>
+</svg>

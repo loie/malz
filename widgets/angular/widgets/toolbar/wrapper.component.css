@@ -1,0 +1,16 @@
+:host {
+	align-items: stretch;
+	display: flex;
+}
+
+:host-context(.reverse) {
+	flex-direction: row-reverse;
+}
+
+:host-context(.vertical) {
+	flex-direction: column;
+}
+
+:host-context(.vertical.reverse) {
+	flex-direction: column-reverse;
+}

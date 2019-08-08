@@ -1,0 +1,146 @@
+/* 
+    Document   : Editor-Stylesheet
+    Edited on  : 17.12.2014, 16:00:00
+    Author     : Thomas Poehnitzsch, Stephan Sprang
+    Description: Stylesheet des zu editierenden Textes
+*/
+
+
+/* Font fuer Marker-Icons laden */
+@font-face {
+	font-family: 'TMarkerFont';
+	src:url('../fonts/TMarkerFont.eot?-mkacyr');
+	src:url('../fonts/TMarkerFont.eot?#iefix-mkacyr') format('embedded-opentype'),
+		url('../fonts/TMarkerFont.woff?-mkacyr') format('woff'),
+		url('../fonts/TMarkerFont.ttf?-mkacyr') format('truetype'),
+		url('../fonts/TMarkerFont.svg?-mkacyr#TMarkerFont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.-twe-over:before { content: ">"; background-color: red; }
+
+/* please use more specific selectors */
+#editor [draggable] { cursor: move; opacity: 1; }
+#editor [draggable]:hover:before { content: "[*"; color: green; background-color: #EEEEEE; }
+#editor [draggable]:hover:after { content: "]"; color: green; background-color: #EEEEEE; }
+
+.-twe-p { display: block; }
+
+
+/* Marker Link mit :before und als Schriftzeichen */
+.-twe-mln :before { content:"\e600";font-family:"TMarkerFont"; color:#00bfff; margin-right:-0.95em;}
+.-twe-mln span { background-color:#e0ffff; }
+
+/* Marker Notiz mit :before und als Schriftzeichen */
+.-twe-marker:before,
+.-twe-markers:before {
+    font-family:"TMarkerFont";
+    font-size: 1em;
+}
+
+.-twe-mnot0:before,
+.-twe-mnot1:before,
+.-twe-mnot2:before,
+.-twe-mnot3:before,
+.-twe-mnot4:before,
+.-twe-markers:before {
+    content:"\e601";
+    margin-right:-1em;
+}
+
+.-twe-mnot0:before { color:#fff080; }
+.-twe-mnot1:before { color:#e38df2; }
+.-twe-mnot2:before { color:#b1e0f9; }
+.-twe-mnot3:before { color:#ffc040; }
+.-twe-mnot4:before { color:#8cc68c; }
+
+.-twe-markers:before { color: red; }
+
+.-twe-mrg:before,
+.-twe-mind:before,
+.-twe-man:before,
+.-twe-fnote:before,
+.-twe-mtr:before,
+.-twe-mbm:before,
+.-twe-mvar:before {
+    content: "\e600";
+    margin-right: -0.95em;
+}
+
+/* Marker Register mit :before und als Schriftzeichen */
+.-twe-mrg:before {
+    color:#7a6afd;
+}
+
+/* Marker Einzug hier mit :before und als Schriftzeichen */
+.-twe-mind:before {
+    color:#0000cd;
+}
+
+/* Marker Textanker mit :before und als Schriftzeichen */
+.-twe-man:before {
+    color:#7cfc00;
+}
+
+/* Marker Fußnote mit :before und als Schriftzeichen */
+.-twe-fnote:before {
+    color:#c0c0c0;
+}
+
+/* Marker Mitlaufender Rahmen mit :before und als Schriftzeichen */
+.-twe-mtr:before { content:"\e602";color:#708090; }
+
+/* Marker Lesezeichen mit :before und als Schriftzeichen */
+.-twe-mbm:before {
+    color:#ff6347;
+}
+
+/* Marker Textvariable mit :before und als Schriftzeichen */
+.-twe-mvar:before {
+    color:#c0c0c0;
+}
+
+.-twe-body { display: block; height: 100%; }
+
+.-twe-over { box-shadow: inset 0 0 5px #888; }
+
+/* overlay to mark selected text */
+.-twe-selectionrect { 
+    position: absolute;
+    background-color: red;
+    opacity: 0.5;
+    z-index: -1;
+}
+                    
+	
+/* Kennzeichnung von Absaetzen mit lokaler Formatierung */
+.userparagraphformat {
+    padding-left: 0.5em;
+    border-left-color: #ff8800;
+    border-left-style: dotted;
+    border-left-width: 2px;
+}
+
+/* Kennzeichnung von Textbereichen mit lokaler Formatierung */
+.usertextformat {
+    border-bottom-color: #ff8800;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+}
+
+/* Blocktrenner */
+.blocksepformat {
+    padding-top: 0.5em;
+	margin-top: 0.5em;
+    border-top-color: #e4e4e4;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    margin-top: 0.5em;
+}
+
+/* leeren neuen Absatz '-' nur grau darstellen */
+span.-twe-empty { color: #CCCCCC; }
+
+/* pageview css styles */
+.rot { color:red; }

@@ -1,0 +1,20 @@
+
+<span class="icon" *ngIf="preIcon">
+	<i class="symbol {{ preIcon }}"></i>
+</span>
+<span class="image" *ngIf="preImage">
+	<img src="{{ preImage }}" style="width: 1.25em;">
+</span>
+<input type="range"
+	[min]="min"
+	[max]="max"
+	[value]="value.getValue()"
+	[step]="step"
+	(input)="inputValue($event)"
+	(change)="updateValue($event)">
+<span class="icon" *ngIf="postIcon">
+	<i class="symbol {{ postIcon }}"></i>
+</span>
+<span class="image" *ngIf="postImage">
+	<img src="{{ postImage }}" style="width: 1.25em;">
+</span>

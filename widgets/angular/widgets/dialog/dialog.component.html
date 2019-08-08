@@ -1,0 +1,33 @@
+<div class="modal"
+    [class.is-active]="active"
+    [class.is-fullwidth]="fullwidth">
+	<div class="modal-background"
+        [class.is-active]="active"
+        [class.is-fading]="fading"
+        (click)="closeDialog()"></div>
+    <div class="modal-card"
+        [class.is-active]="active"
+        [class.is-fading]="fading">
+    	<header class="modal-card-head">
+    		<p class="modal-card-title">{{ title }}</p>
+    	</header>
+    	<section class="modal-card-body">
+    		<ng-content select="tm-dialog-body"></ng-content>
+    	</section>
+    	<footer class="modal-card-foot">
+    		<div class="alternative">
+    			<ng-content select="tm-dialog-additional"></ng-content>
+    		</div>
+    		<div class="cancel-action">
+    			<tm-button
+    				[label]="cancelLabel"
+                    (click)="closeDialog()"
+    				[context]="UIButtonContext.Default">
+	      		</tm-button>
+    		</div>
+      		<div class="tm-dialog-primary-action">
+	      		<ng-content select="tm-dialog-primary-action"></ng-content>
+      		</div>
+    	</footer>
+  	</div>
+</div>

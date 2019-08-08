@@ -1,0 +1,60 @@
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+.field.has-addons {
+    flex-flow: initial;
+}
+
+.field .help {
+    order: -1;
+}
+
+.help.is-info {
+    color: var(--color-info-dark);
+}
+
+.help.is-success {
+    color: var(--color-success-dark);
+}
+
+.help.is-warning {
+    color: var(--color-warning-dark);
+}
+
+.help.is-danger {
+    color: var(--color-danger-dark);
+}
+
+.field label {
+    margin-bottom: 0;
+}
+
+.field:not(:last-child) {
+	margin-bottom: 0.75rem;
+}
+
+.field.has-addons {
+	display: flex;
+	justify-content: flex-start;
+}
+
+:host :host-context(.breadcrumb) .field,
+:host :host-context(user-menu) .field,
+:host :host-context(tm-toolbar) .field,
+:host :host-context(tm-tile.ugly) .field,
+:host :host-context(.inspectorProperties) .field{
+    margin-bottom: 0;
+}
+
+:host :host-context(tm-tile.ugly) .field,
+:host :host-context(tm-tile.ugly) .field .control {
+    height: 100%;
+}
+
+:host :host-context(#tree-container) .field,
+:host :host-context(#list-container) .field {
+    margin-bottom: 0;
+}

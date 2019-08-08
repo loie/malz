@@ -1,0 +1,33 @@
+<ng-container *ngIf="icon || label; else noicon">
+	<a
+		class="dropdown-item"
+		[attr.href]="target ? target : null"
+		[attr.target]="openinnew ? '_blank': null"
+		[attr.disabled]="disabled ? true : null"
+		[class.is-active]="active"
+		[class.icon-only]="( !label || label.length  === 0 ) && icon"
+		(click)="fireValue($event)">
+		<ng-container *ngIf="icon">
+			<span class="icon" [tmInlineSVG]="icon"></span>
+		</ng-container>
+		<span class="image" *ngIf="image">
+			<img src="{{ image }}">
+		</span>
+		<span
+			*ngIf="color"
+			class="state"
+			[class.circle]="markerType === MarkerType.Circle ? true : false"
+			[class.square]="markerType === MarkerType.Square ? true : false"
+			[class.sidebar]="markerType === MarkerType.Sidebar ? true : false"
+			[style.background-color]="color"
+			></span>
+		<span *ngIf="label && label.length > 0">{{ label }}</span>
+	</a>
+</ng-container>
+<ng-template #noicon>
+	<div
+		*ngIf="label === undefined && value === undefined"
+		class="dropdown-item">
+		<ng-content></ng-content>
+	</div>
+</ng-template>

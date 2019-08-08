@@ -1,0 +1,13 @@
+<tm-contextmenu-item
+	*ngFor="let item of items"
+	id="contextmenu"
+	[label]="item.label"
+	[title]="item.title === undefined ? '' : item.title"
+	[icon]="item.icon"
+	[target]="item.target"
+	[action]="item.action"
+	[items]="item.items"
+	[dialogRef]="ref"
+	(itemClicked)="closeDialog(item)"
+	>
+</tm-contextmenu-item>

@@ -1,0 +1,151 @@
+.modal {
+  opacity: 0;
+  pointer-events: none;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.modal.is-active {
+  display: grid;
+  grid-template-columns: [start] 1fr [content] 40rem 1fr;
+  grid-template-rows: [start] 0.4fr [content] auto 0.6fr;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal.is-active.is-fullwidth {
+  grid-template-columns: [start] 1fr [content] calc(100vw - 4rem) 1fr;
+}
+
+.modal-background {
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: var(--gradient-base-transparent-80);
+  transform: scale(1.25);
+  transform-origin: 25vw 25vh;
+  transition-duration: var(--duration-medium);
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform;
+}
+
+.modal-content,
+.modal-card {
+  max-height: calc(100vh - 40px);
+}
+
+.modal-card {
+  grid-column: content;
+  grid-row: content;
+
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 40px);
+  box-shadow: 0 1rem 2rem var(--color-base-transparent-10);
+  opacity: 0;
+  transform: scale(1.05);
+  transform-origin: 25vw 25vh;
+  transition-delay: var(--duration-short);
+  transition-duration: var(--duration-medium);
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform;
+}
+
+.modal-card.is-active,
+.modal-background.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-card.is-active.is-fading,
+.modal-background.is-active.is-fading {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.modal-background.is-active.is-fading {
+  transition-delay: var(--duration-short);
+  transition-duration: var(--duration-medium);
+}
+
+.modal-card.is-active.is-fading {
+  transition-delay: 0;
+  transition-duration: var(--duration-short);
+}
+
+.modal-card-head,
+.modal-card-foot {
+  align-items: center;
+  background-color: var(--color-light);
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-card-head {
+  border-bottom: 0.05rem solid var(--color-medium-light);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.modal-card-title {
+  color: #363636;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.modal-card-foot {
+  display: grid;
+  grid-template-columns: [alternative] 1fr [cancel] auto [primary] auto;
+  grid-template-rows: [row] auto;
+  grid-column-gap: 0.5rem;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-top: 0.05rem solid var(--color-medium-light);
+}
+
+.modal-card-foot .button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.modal-card-foot .alternative {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+.modal-card-foot .primary {
+  grid-column: primary;
+  grid-row: row;
+}
+
+.modal-card-foot .cancel {
+  grid-column: cancel;
+  grid-row: row;
+}
+
+.modal-card-body {
+  background-color: white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: unset;
+  padding: 20px;
+  max-height: calc(100vh - 10rem);
+}

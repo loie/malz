@@ -1,0 +1,28 @@
+<span class="icon" *ngIf="icon">
+	<i class="symbol {{ icon }}"></i>
+</span>
+<div class="field">
+    <textarea
+    	class="control textarea"
+    	placeholder="My Placeholder Text"
+		[class.is-primary]="context === UIContext.Primary"
+		[class.is-success]="context === UIContext.Success"
+		[class.is-warning]="context === UIContext.Warning"
+		[class.is-danger]="context === UIContext.Danger"
+		[class.is-disabled]="disabled"
+		[attr.readonly]="disabled ? true : null"
+		[placeholder]="placeholder"
+		(input)="onInput($event)"
+		(keyup)="onKeyUp($event)"
+    	>{{ valueLabel ? valueLabel : initValue }}</textarea>
+    <label>
+    	{{ label }}
+		<sup *ngIf="required">*</sup>
+	</label>
+	<p class="help"
+  		*ngIf="showHelp || actualShowHelp"
+  		[class.is-primary]="context === UIContext.Primary"
+		[class.is-success]="context === UIContext.Success"
+		[class.is-warning]="context === UIContext.Warning"
+		[class.is-danger]="context === UIContext.Danger">{{ help }}</p>
+</div>

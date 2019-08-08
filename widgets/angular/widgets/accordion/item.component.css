@@ -1,0 +1,80 @@
+:host  {
+  display: block;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: var(--color-medium-light);
+  border-bottom-width: 0;
+}
+
+:host(:first-of-type),
+:host(:first-of-type) .accordion-header {
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+:host(:last-of-type) {
+  border-bottom: 0.05rem solid var(--color-medium-light);
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+:host(:last-of-type:not(.is-active)) .accordion-header {
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+:host(:last-of-type) .accordion-content {
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.accordion-header {
+  position: relative;
+  cursor: pointer;
+  padding: 1rem 2rem 1rem 3rem;
+  background-color: var(--color-light);
+}
+
+:host(.is-active) .accordion-header {
+  border-bottom: 0.05rem solid var(--color-medium-light);
+}
+
+.accordion-header:hover {
+  background-image: var(--gradient-light);
+}
+
+.accordion-header:before {
+  border: 0.05rem solid var(--color-base);
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  display: block;
+  height: 0.5em;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  transform: rotate(225deg);
+  transform-origin: center;
+  width: 0.5em;
+  margin-top: -0.275em;
+  left: 2em;
+  top: 50%;
+  transition-duration: var(--duration-medium);
+  transition-delay: 0 var(--duration-medium);
+  will-change: transform;
+}
+
+:host(.is-active) .accordion-header:before {
+  display: block;
+  transform: rotate(315deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem 2rem;
+  background-color: var(--color-light-light);
+}
+
+:host(.is-active) .accordion-content {
+  display: block;
+}

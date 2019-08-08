@@ -1,0 +1,20 @@
+<a class="button"
+	[attr.disabled]="disabled ? true : null"
+	[attr.target]="openinnew ? '_blank': null"
+	[class.is-loading]="loading"
+	[class.is-primary]="context === UIButtonContext.Primary"
+	[class.is-success]="context === UIButtonContext.Success"
+	[class.is-warning]="context === UIButtonContext.Warning"
+	[class.is-danger]="context === UIButtonContext.Danger"
+	[class.is-link]="context === UIButtonContext.Link"
+	[class.is-minimal]="context === UIButtonContext.Minimal"
+	[class.is-small]="small"
+	[class.is-fullwidth]="fullwidth"
+	[class.is-active]="pressed"
+	[class.icon-only]="label.length === 0 && icon"
+	(click)="fireToggle($event)">
+	<ng-container *ngIf="icon">
+		<span class="icon" [tmInlineSVG]="icon"></span>
+	</ng-container>
+	<span *ngIf="label.length > 0">{{ label }}</span>
+</a>

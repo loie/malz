@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="48"
+   height="48"
+   viewBox="0 0 12.69984 12.69984"
+   version="1.1"
+   id="svg17730">
+  <defs
+     id="defs17724" />
+  <metadata
+     id="metadata17727">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="rotate(-90,6.3499063,6.34992)"
+     id="g15740">
+    <g
+       id="g15169"
+       transform="matrix(-1,0,0,1,12.699813,0)">
+      <path
+         class="base"
+         style="fill:none;fill-rule:evenodd;stroke-width:0.52916002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 1.3229,1.3229 V 11.37694"
+         id="path9700" />
+      <g
+         id="g15163">
+        <rect
+           class="base"
+           ry="0.52915978"
+           rx="0.52916002"
+           y="-11.37694"
+           x="2.3812201"
+           height="8.4665594"
+           width="3.1749599"
+           id="rect14497"
+           style="opacity:1;fill:none;fill-opacity:1;stroke-width:0.52916002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.59999996;stroke-opacity:1"
+           transform="rotate(90)" />
+        <rect
+           transform="rotate(90)"
+           style="opacity:1;fill:none;fill-opacity:1;stroke-width:0.52916002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.59999996;stroke-opacity:1"
+           id="rect15159"
+           width="3.1749458"
+           height="5.2915816"
+           x="7.1436739"
+           y="-8.2019663"
+           rx="0.52915996"
+           ry="0.52915972"
+           class="base" />
+      </g>
+    </g>
+  </g>
+</svg>

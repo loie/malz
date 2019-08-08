@@ -1,0 +1,44 @@
+<span *ngIf="fieldicon" class="icon" [tmInlineSVG]="fieldicon"></span>
+<div class="field">
+    <div class="control">
+		<div class="dropdown"
+			[class.is-active]="isOpen"
+			[class.is-right]="right"
+			[class.is-up]="up"
+			>
+			<div class="dropdown-trigger">
+				<tm-button
+					[loading]="loading"
+					[context]="context"
+					[icon]="icon"
+					[image]="image"
+					[label]="valueLabel"
+					[color]="color"
+					[markerType]="markerType"
+					[disabled]="disabled"
+					[small]="small"
+					[leftbound]="true"
+					(click)="openDropdown($event.target)">
+				</tm-button>
+			</div>
+			<ng-container *ngIf="isOpen; else noContent">
+				<div *ngIf="isOpen" class="closing-background" (click)="closeDropdown()"></div>
+				<div class="dropdown-menu"
+					[class.invisible]="hasHiddenMenu"
+					role="menu">
+				    <div class="dropdown-content">
+				    	<ng-content></ng-content>
+				    </div>
+				</div>
+			</ng-container>
+			<ng-template #noContent></ng-template>
+		</div>
+    </div>
+    <label *ngIf="label">{{ label }}</label>
+    <p class="help"
+  		*ngIf="showHelp || actualShowHelp"
+  		[class.is-primary]="context === UIContext.Primary"
+		[class.is-success]="context === UIContext.Success"
+		[class.is-warning]="context === UIContext.Warning"
+		[class.is-danger]="context === UIContext.Danger">{{ help }}</p>
+</div>

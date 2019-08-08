@@ -1,0 +1,23 @@
+<div
+	class="nav-item"
+	[class.is-active]="active">
+	<span>
+		<span
+			*ngIf="color"
+			class="state"
+			[class.circle]="markerType === MarkerType.Circle ? true : false"
+			[class.square]="markerType === MarkerType.Square ? true : false"
+			[class.sidebar]="markerType === MarkerType.Sidebar ? true : false"
+			[style.background-color]="color"></span>
+		<span class="active-indicator" *ngIf="active"></span>
+		<span>{{ label }}</span>
+	</span>
+	<tm-navlist-dropdown
+		*ngIf="hasDropdownItems"
+		label=""
+		icon=""
+		[context]="UIButtonContext.Default"
+		right="true">
+		<ng-content></ng-content>
+	</tm-navlist-dropdown>
+</div>

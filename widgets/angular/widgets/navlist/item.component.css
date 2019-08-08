@@ -1,0 +1,70 @@
+.nav-item {
+  display: grid;
+  grid-template-columns: [label] 1fr [action] 3rem;
+  align-content: center;
+  background-color: var(--light-light);
+  height: 3rem;
+  padding-left: 1rem;
+  border-bottom: 0.06rem solid var(--color-medium-light);
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+  border-left-style: solid;
+  border-left-color: transparent;
+  border-left-width: 0.25rem;
+  position: relative;
+}
+
+.nav-item:hover {
+  background-color: var(--color-light);
+}
+
+.nav-item.is-active {
+  border-left-color: var(--color-primary);
+}
+
+
+.nav-item span {
+  display: flex;
+  font-weight: 300;
+  height: 100%;
+  align-items: center;
+  background-color: transparent;
+}
+
+.nav-item tm-navlist-dropdown {
+  display: none;
+}
+
+.nav-item:hover tm-navlist-dropdown {
+  display: block;
+  font-weight: 400;
+  color: var(--color-base);
+  background-color: var(--color-light);
+}
+
+.nav-item span.state {
+  display: inline-block;
+  border-radius: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 1rem;
+}
+
+.nav-item span.state.square {
+  border-radius: 0;
+}
+
+.nav-item span.state.circle {
+  border-radius: 50%;
+}
+
+.nav-item span.state.sidebar {
+  position: absolute;
+  height: 100%;
+  width: 0.25rem;
+  left: -0.25rem;
+  top: 0;
+  border-radius: 0;
+}

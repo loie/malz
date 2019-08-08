@@ -1,0 +1,6 @@
+.dropdown-menu {
+    left: 0;
+    min-width: 12rem;
+    padding-top: 4px;
+    z-index: 20;
+}

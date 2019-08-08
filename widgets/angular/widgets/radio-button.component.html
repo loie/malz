@@ -1,0 +1,25 @@
+<a class="button"
+    [attr.disabled]="disabled ? true : null"
+    [class.is-loading]="loading"
+    [class.is-primary]="context === UIButtonContext.Primary"
+    [class.is-success]="context === UIButtonContext.Success"
+    [class.is-warning]="context === UIButtonContext.Warning"
+    [class.is-danger]="context === UIButtonContext.Danger"
+    [class.is-link]="context === UIButtonContext.Link"
+    [class.is-minimal]="context === UIButtonContext.Minimal"
+    [class.is-small]="small"
+    [class.is-active]="pressed"
+    [class.icon-only]="label.length === 0 && icon"
+    [class.color-only]="color && !icon && !label"
+    (click)="fireValue($event)">
+    <span *ngIf="icon" class="icon" [tmInlineSVG]="icon"></span>
+    <span
+        *ngIf="color"
+        class="state"
+        [class.circle]="markerType === MarkerType.Circle ? true : false"
+        [class.square]="markerType === MarkerType.Square ? true : false"
+        [class.sidebar]="markerType === MarkerType.Sidebar ? true : false"
+        [class.bigrectangle]="markerType === MarkerType.BigRectangle ? true : false"
+        [style.background-color]="color"></span>
+    <span *ngIf="label.length > 0">{{ label }}</span>
+</a>

@@ -1,0 +1,212 @@
+/*** SHARED BY MANY COMPONENTS -- DO A FULLTEXT SEARCH & REPLACE IF YOU CHANGE THIS! ***/
+.closing-background {
+	background-color: transparent;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 15;
+}
+/*** END of SHARED BY MANY COMPONENTS **************************************************/
+
+
+.toolbar-item,
+.toolbar-link {
+    color: var(--color-base);
+    display: block;
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+a.toolbar-item:hover, a.toolbar-item.is-active,
+a.toolbar-link:hover,
+a.toolbar-link.is-active {
+    background-color: var(--color-light-light);
+    color: var(--color-primary);
+}
+
+.toolbar-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.toolbar-item img {
+    max-height: 1.75rem;
+}
+
+.toolbar-item .icon + span {
+    margin-left: 0.5rem;
+}
+
+.toolbar-item.has-dropdown {
+	align-items: stretch;
+	padding: 0;
+	height: 100%;
+}
+
+.toolbar-item.has-dropdown:hover .toolbar-link, .toolbar-item.has-dropdown.is-active .toolbar-link {
+    background-color: var(--color-light-light);
+}
+
+.toolbar-item.is-expanded {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.toolbar-link {
+    padding-right: 2.5em;
+}
+
+.toolbar-dropdown {
+    font-size: 0.875rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.toolbar-item,
+.toolbar-link {
+    align-items: center;
+    display: flex;
+}
+
+
+.toolbar-item.has-dropdown-up .toolbar-link::after {
+    transform: rotate(135deg) translate(0.25em, -0.25em);
+}
+
+
+.toolbar-item.has-dropdown-up .toolbar-dropdown {
+    border-bottom: 1px solid var(--color-medium);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-top: none;
+    bottom: 100%;
+    box-shadow: 0 -8px 8px var(--color-base-transparent-10);
+    top: auto;
+}
+
+.toolbar-item.is-active .toolbar-dropdown {
+    display: block;
+}
+
+.toolbar-item.is-active .toolbar-dropdown.is-boxed {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.toolbar-link::after {
+    border: 1px solid var(--color-base);
+    border-right: 0;
+    border-top: 0;
+    content: " ";
+    display: block;
+    height: 0.5em;
+    pointer-events: none;
+    position: absolute;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    width: 0.5em;
+    margin-top: -0.375em;
+    right: 1.125em;
+    top: 50%;
+}
+
+:host :host-context(.is-dark) .toolbar-item[disabled] .toolbar-link::after {
+    pointer-events: none;
+    border-color: var(--color-medium-light);
+}
+
+.toolbar-dropdown {
+    background-color: var(--color-light-light);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border: 0.05rem solid var(--color-medium-light);
+    border-top-color: var(--color-medium);
+    box-shadow: 0 8px 8px var(--color-base-transparent-10);
+    display: none;
+    font-size: 0.875rem;
+    left: 0;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.toolbar-dropdown.is-right {
+    left: auto;
+    right: 0;
+}
+
+a.toolbar-item.is-active,
+a.toolbar-link.is-active {
+    color: var(--color-base);
+}
+
+a.toolbar-item.is-active:not(:hover),
+a.toolbar-link.is-active:not(:hover) {
+    background-color: var(--color-primary-light);
+}
+
+.toolbar-item[disabled] {
+    pointer-events: none;
+}
+
+:host :host-context(.is-dark) .toolbar-item,
+:host :host-context(.is-dark) .toolbar-link {
+    color: var(--color-light);
+}
+
+:host :host-context(.is-dark) a.toolbar-item:hover,
+:host :host-context(.is-dark) a.toolbar-item.is-active,
+:host :host-context(.is-dark) a.toolbar-link:hover,
+:host :host-context(.is-dark) a.toolbar-link.is-active {
+    background-color: var(--color-base);
+    color: var(--color-primary);
+}
+
+:host :host-context(.is-dark) .toolbar-link::after {
+    border: 1px solid var(--color-light);
+    border-top-width: 0;
+    border-right-width: 0;
+}
+
+:host :host-context(.is-dark) .toolbar-dropdown .toolbar-item {
+    background-color: var(--color-light-light);
+    color: var(--color-base);
+}
+
+:host :host-context(.is-dark) .toolbar-dropdown a.toolbar-item:hover {
+    background-color: var(--color-light);
+    color: var(--color-base);
+}
+
+:host :host-context(.is-dark) a.toolbar-item.is-active,
+:host :host-context(.is-dark) a.toolbar-link.is-active {
+    color: var(--color-light-light);
+    background-color: var(--color-primary-light);
+}
+
+:host :host-context(.is-dark) a.toolbar-item.is-active:hover,
+:host :host-context(.is-dark) a.toolbar-link.is-active:hover {
+    color: var(--color-light-light);
+    background-color: var(--color-primary);
+}
+
+:host :host-context(.is-dark) a.toolbar-item.is-active:not(:hover),
+:host :host-context(.is-dark) a.toolbar-link.is-active:not(:hover) {
+    background-color: var(--color-primary-light);
+}
+
+:host :host-context(.is-dark) .toolbar-item.has-dropdown:hover .toolbar-link,
+:host :host-context(.is-dark) .toolbar-item.has-dropdown.is-active .toolbar-link {
+    background-color: var(--color-base);
+}
+
+.invisible {
+    opacity: 0;
+}

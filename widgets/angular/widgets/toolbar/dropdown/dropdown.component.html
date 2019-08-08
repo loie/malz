@@ -1,0 +1,29 @@
+<div class="toolbar-item has-dropdown"
+	[class.is-active]="isOpen"
+	[class.has-dropdown-up]="up"
+	[attr.disabled]="disabled ? disabled : undefined">
+	<div
+		class="toolbar-link"
+		(click)="openDropdown($event.target)">
+		<tm-toolbar-button
+			[loading]="loading"
+			[disabled]="disabled"
+			[icon]="icon"
+			[color]="color"
+			[markerType]="markerType"
+			[label]="label" >
+		</tm-toolbar-button>
+	</div>
+	<ng-container *ngIf="isOpen; else noContent">
+		<div *ngIf="isOpen" class="closing-background" (click)="closeDropdown($event.target)"></div>
+		<div class="toolbar-dropdown"
+			role="menu"
+			[class.is-right]="right"
+			[class.invisible]="hasHiddenMenu">
+		    <div class="dropdown-content">
+		    	<ng-content></ng-content>
+		    </div>
+		</div>
+	</ng-container>
+	<ng-template #noContent></ng-template>
+</div>

@@ -1,0 +1,549 @@
+:host([data-disabled=true]) {
+    pointer-events: none;
+}
+
+.button {
+    font-family: var(--font-family-base);
+    font-weight: 300;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border-width: 0.05rem;
+    border-style: solid;
+    border-color: var(--color-medium-light);
+    border-radius: 3px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: space-between;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-top: calc(0.375em - 1px);
+    padding-left: 0.77em;
+    padding-right: 0.77em;
+    position: relative;
+    /*vertical-align: top;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: var(--color-light);
+    color: var(--color-base-light);
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+}
+
+
+.button:focus, .button.is-focused, .button:active, .button.is-active {
+    outline: none;
+}
+
+.button:hover, .button.is-hovered {
+    background-color: var(--color-light-light);
+    border-color: var(--color-medium);
+    color: var(--color-base);
+    box-shadow: 0 0.125em  0.25em var(--color-base-transparent-10);
+}
+
+.button:focus, .button.is-focused {
+    color: var(--color-base);
+}
+
+.button:active, .button.is-active {
+    border-color: var(--color-medium);
+    color: var(--color-primary);
+    box-shadow: 0 0.125rem 0.25rem var(--color-base-transparent-10) inset;
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: var(--color-light-light);
+    border-color: var(--color-medium-light);
+    box-shadow: none;
+    color: var(--color-medium);
+}
+
+.button[disabled] img {
+    opacity: 0.3;
+}
+
+/* Primary */
+
+.button.is-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-primary:hover, .button.is-primary.is-hovered {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-primary:focus, .button.is-primary.is-focused {
+    border-color: transparent;
+    color: var(--color-light-light);
+}
+
+.button.is-primary:focus:not(:active), .button.is-primary.is-focused:not(:active) {
+        box-shadow: 0 0 0 0.125em var(--color-base-transparent-10);
+}
+
+.button.is-primary:active, .button.is-primary.is-active {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary);
+    background-image: none;
+    color: var(--color-light-light);
+}
+
+.button.is-primary[disabled] {
+    background-color: var(--color-primary-light);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-info {
+    background-color: var(--color-info);
+    border-color: var(--color-info-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-info:hover, .button.is-info.is-hovered {
+    background-color: var(--color-info-light);
+    border-color: var(--color-info-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-info:focus, .button.is-info.is-focused {
+    border-color: transparent;
+    color: var(--color-light-light);
+}
+
+.button.is-info:focus:not(:active), .button.is-info.is-focused:not(:active) {
+        box-shadow: 0 0 0 0.125em var(--color-base-transparent-10);
+}
+
+.button.is-info:active, .button.is-info.is-active {
+    background-color: var(--color-info-light);
+    border-color: var(--color-info);
+    background-image: none;
+    color: var(--color-light-light);
+}
+
+.button.is-info[disabled] {
+    background-color: var(--color-info-light);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-link);
+}
+
+.button.is-minimal {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-base);
+}
+
+.button.is-success {
+    background-color: var(--color-success);
+    border-color: var(--color-success-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-success:hover, .button.is-success.is-hovered {
+    background-color: var(--color-success-info);
+    border-color: var(--color-success-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-success:focus, .button.is-success.is-focused {
+    border-color: transparent;
+    color: var(--color-light-light);
+}
+
+.button.is-success:focus:not(:active), .button.is-success.is-focused:not(:active) {
+        box-shadow: 0 0 0 0.125em var(--color-base-transparent-10);
+}
+
+.button.is-success:active, .button.is-success.is-active {
+    background-color: var(--color-success-light);
+    border-color: var(--color-success);
+    background-image: none;
+    color: var(--color-light-light);
+}
+
+.button.is-success[disabled] {
+    background-color: var(--color-success-light);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-warning {
+    background-color: var(--color-warning);
+    border-color: var(--color-warning-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-warning:hover, .button.is-warning.is-hovered {
+    background-color: var(--color-warning-info);
+    border-color: var(--color-warning-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-warning:focus, .button.is-warning.is-focused {
+    border-color: transparent;
+    color: var(--color-light-light);
+}
+
+.button.is-warning:focus:not(:active), .button.is-warning.is-focused:not(:active) {
+    box-shadow: 0 0 0 0.125em var(--color-base-transparent-10);
+}
+
+.button.is-warning:active, .button.is-warning.is-active {
+    background-color: var(--color-warning-light);
+    border-color: var(--color-warning);
+    background-image: none;
+    color: var(--color-light-light);
+}
+
+.button.is-warning[disabled] {
+    background-color: var(--color-warning-light);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-danger {
+    background-color: var(--color-danger);
+    border-color: var(--color-danger-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-danger:hover, .button.is-danger.is-hovered {
+    background-color: var(--color-danger-light);
+    border-color: var(--color-danger-dark);
+    color: var(--color-light-light);
+}
+
+.button.is-danger:focus, .button.is-danger.is-focused {
+    border-color: transparent;
+    color: var(--color-light-light);
+}
+
+.button.is-danger:focus:not(:active), .button.is-danger.is-focused:not(:active) {
+    box-shadow: 0 0 0 0.125em var(--color-base-transparent-10);
+}
+
+.button.is-danger:active, .button.is-danger.is-active {
+    background-color: var(--color-danger-light);
+    border-color: var(--color-danger);
+    background-image: none;
+    color: var(--color-light-light);
+}
+
+.button.is-danger[disabled] {
+    background-color: var(--color-danger-light);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-link:hover, .button.is-link.is-hovered {
+    background-image: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-link-light);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    box-shadow: none;
+}
+
+.button.is-minimal:hover, .button.is-minimal.is-hovered {
+    background-image: none;
+    background-color: var(--color-light-light);
+    border-color: var(--color-medium-light);
+    color: var(--color-base-light);
+}
+
+.button.is-link:focus, .button.is-link.is-focused {
+    border-color: transparent;
+    color: var(--color-link-light);
+}
+
+.button.is-minimal:focus, .button.is-minimal.is-focused {
+    border-color: transparent;
+    color: var(--color-base-light);
+}
+
+.button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
+        box-shadow: 0 0 0 0.125em var(--color-base-transparent-10);
+}
+
+.button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
+        box-shadow: none;
+}
+
+.button.is-link:active, .button.is-link.is-active {
+    background-color: transparent;
+    border-color: transparent;
+    background-image: none;
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: var(--color-link);
+    text-decoration-style: solid;
+}
+
+.button.is-link[disabled] {
+    color: var(--color-link-light);
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-minimal:active, .button.is-minimal.is-active {
+    background-color: transparent;
+    border-color: transparent;
+    background-image: none;
+    color: var(--color-base);
+}
+
+.button.is-minimal[disabled] {
+    color: var(--color-base-light);
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* Sizes */
+
+.button.is-small {
+    border-radius: calc(var(--font-size-small) / 7);
+    font-size: var(--font-size-small);
+    padding: 0.77em;
+}
+
+.button.is-small.icon-only {
+    height: 2em;
+    width: 2em;
+}
+
+
+/* Loading */
+.button.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.button.is-loading:after {
+    animation: spinAround 500ms infinite linear;
+    border: 2px solid var(--color-medium-light);
+    border-radius: 100%;
+    border-right-color: var(--color-medium-light-transparent);
+    border-top-color: var(--color-medium-light-transparent);
+    content: "";
+    display: block;
+    height: 1em;
+    position: relative;
+    width: 1em;
+    position: absolute;
+    left: calc(50% - (1em / 2) - 2px);
+    top: calc(50% - (1em / 2) -2px);
+    position: absolute !important;
+}
+
+.button.is-primary.is-loading:after,
+.button.is-info.is-loading:after,
+.button.is-success.is-loading:after,
+.button.is-warning.is-loading:after,
+.button.is-danger.is-loading:after {
+    border-color:
+        var(--color-light-light-transparent-20)
+        var(--color-light-light-transparent-20)
+        var(--color-light-light-transparent-80)
+        var(--color-light-light-transparent-80) !important;
+}
+
+.button.is-fullwidth {
+    width: 100%;
+}
+
+
+
+.button .symbol.square {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.icon, .image {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.button.is-leftbound .label {
+    text-align: left;
+    width: calc(100% - 4rem);
+}
+
+.icon.is-small {
+    height: 1rem;
+    width: 1rem;
+}
+
+.button .icon, .button .icon.is-small, .button .icon.is-medium, .button .icon.is-large {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.button .icon:first-child:not(:last-child) {
+    margin-left: calc(-0.375em - 1px);
+    margin-right: 0.1875em;
+}
+
+:host-context(fieldset[disabled]) .button {
+    pointer-events: none;
+}
+
+:host :host-context(.field.default) {
+    flex-shrink: 0;
+}
+
+:host-context(.field.default):not(:last-child) {
+	margin-bottom: 0;
+	margin-left: 0;
+    margin-right: 0.75rem;
+}
+
+
+:host-context(.field.default.reverse):not(:last-child) {
+    margin-bottom: 0;
+    margin-left: 0.75rem;
+    margin-right: 0;
+}
+
+
+/* ----------- button row grouped  START ---------*/
+
+:host :host-context(.field.default.grouped) {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+:host-context(.field.default.grouped):not(:last-child) .button,
+:host :host-context(.field.default.grouped tm-dropdown:not(:last-child) .dropdown-trigger) .button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+}
+
+:host-context(.field.default.grouped):not(:first-child) .button,
+:host :host-context(.field.default.grouped tm-dropdown:not(:first-child) .dropdown-trigger) .button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/* ----------- button row grouped  END ---------*/
+
+:host :host-context(.dropdown:not(.is-multiple) .dropdown-trigger) .button::after  {
+    border: 1px solid var(--color-base);
+    border-right: 0;
+    border-top: 0;
+    content: " ";
+    display: block;
+    height: 0.5em;
+    pointer-events: none;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    width: 0.5em;
+    margin-top: -0.25rem;
+    margin-left: 0.5rem;
+    z-index: 4;
+}
+
+:host :host-context(.dropdown:not(.is-multiple) .dropdown-trigger) .button.has-color::after  {
+    margin-left: auto;
+}
+
+:host :host-context(.dropdown:not(.is-multiple) .dropdown-trigger) .button:not(.has-label):not(.has-color):not(.has-icon)::after  {
+    margin-left: 0;
+}
+
+:host :host-context(tm-navlist-dropdown .dropdown:not(.is-multiple) .dropdown-trigger) .button::after  {
+    margin-left: 0;
+}
+
+:host :host-context(.dropdown:not(.is-multiple) .dropdown-trigger) .button.is-primary::after {
+    border-color: 1px solid var(--color-light-light);
+}
+
+:host :host-context(.field .control .dropdown .dropdown-trigger),
+:host :host-context(.field .control .dropdown .dropdown-trigger) .button {
+    width: 100%;
+}
+
+:host :host-context(.field .control .dropdown .dropdown-trigger) .button {
+    justify-content: space-between;
+}
+
+:host :host-context(.field .control .dropdown .dropdown-trigger) .button.is-empty {
+    justify-content: flex-end;
+}
+
+:host :host-context(.field .control .dropdown .dropdown-trigger) .button.has-label.has-color {
+    justify-content: flex-start;
+}
+
+.state {
+    display: inline-block;
+    border-radius: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 1rem;
+}
+
+.state.square {
+  border-radius: 0;
+}
+
+.state.circle {
+  border-radius: 50%;
+}
+
+.state.sidebar {
+  position: absolute;
+  height: 2.05rem;
+  width: 0.25rem;
+  left: 0;
+  top: 0;
+}
+
+:host :host-context(.breadcrumb .item .dropdown-trigger) .button:after {
+    transition-duration: var(--duration-short);
+    transition-property: transform;
+    transform: translateX(-0.1rem) translateY(0.1rem) rotate(225deg);
+    will-change: transform;
+}
+
+:host :host-context(.breadcrumb .item .is-active .dropdown-trigger) .button:after {
+    transform: rotate(-45deg);
+}
+
+:host :host-context(.rem-10) .button.is-leftbound .label {
+    width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

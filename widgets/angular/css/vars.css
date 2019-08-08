@@ -1,0 +1,90 @@
+:root {
+	--color-primary: #ff8800;
+	--color-primary-light: #ffcf99;
+	--color-primary-dark: #b86200;
+	--color-base: #303030;
+	--color-base-light: #3f3f3f;
+	--color-medium: #999999;
+	--color-medium-light: #aaaaaa;
+	--color-light: #f3f3f3;
+	--color-light-light: white;
+	--color-info: #74D0D0;
+	--color-info-light: #6ccee0;
+	--color-info-dark: #297a8a;
+	--color-success: #CCE010;
+	--color-success-light: #a8de97;
+	--color-success-dark: #789e6c;
+	--color-warning: #ffc56e;
+	--color-warning-light: #ffd391;
+	--color-warning-dark: #ba9050;
+	--color-danger: #FF0010;
+	--color-danger-light: #f57380;
+	--color-danger-dark: #9e313c;
+	--color-link: #00206D;
+	--color-link-light: #00438C;
+	--color-highlight-embedded-article: var(--color-primary);
+	--color-highlight-embedded-picture: var(--color-danger);
+
+	--color-primary-transparent: rgba(255, 136, 0, 0.1);
+	--color-base-transparent-10: rgba(32, 37, 42, 0.1);
+	--color-base-transparent-60: rgba(32, 37, 42, 0.6);
+	--color-base-transparent-80: rgba(32, 37, 42, 0.8);
+	--color-light-light-transparent-80: rgba(255, 255, 255, 0.8);
+	--color-light-light-transparent-40: rgba(255, 255, 255, 0.4);
+	--color-light-light-transparent-20: rgba(255, 255, 255, 0.2);
+	--color-medium-light-transparent: rgba(162, 177, 189, 0.3);
+
+	--gradient-primary: linear-gradient(0deg, var(--color-primary), var(--color-primary-light));
+	--gradient-base: linear-gradient(0deg, var(--color-base), var(--color-base-light));
+	--gradient-base-transparent-80: linear-gradient(0deg, var(--color-base-transparent-60), var(--color-base-transparent-80));
+	--gradient-medium: linear-gradient(0deg, var(--color-medium), var(--color-medium-light));
+	--gradient-light: linear-gradient(0deg, var(--color-light), var(--color-light-light));
+
+	--gradient-hint-transparent: linear-gradient(45deg, var(--color-medium-light-transparent), var(--color-light-light-transparent-20));
+
+	--gradient-info: linear-gradient(0deg, var(--color-info), var(--color-info-light));;
+	--gradient-success: linear-gradient(0deg, var(--color-success), var(--color-success-light));
+	--gradient-warning: linear-gradient(0deg, var(--color-warning), var(--color-warning-light));
+	--gradient-danger: linear-gradient(0deg, var(--color-danger), var(--color-danger-light));;
+	--gradient-link: linear-gradient(0deg, var(--color-link), var(--color-link-light));;
+
+	/* font sizes have 1:333 aspect relative to its direct sibling size */
+	--font-size-base: 14px;
+	--font-size-large: calc(1.333 * var(--font-size-base));
+	--font-size-giga: 58.922px;
+	--font-size-mega: 44.203px;
+	--font-size-huge: 24.876px;
+	--font-size-small: 10.503px;
+	--font-size-tiny: 7.879px;
+
+	--font-line-height-giga: 4.209em;
+	--font-line-height-mega: 3.157em;
+	--font-line-height-huge: 2.369em;
+	--font-line-height-large: 1.777em;
+	--font-line-height-base: 1.333em;
+	--font-line-height-small: 1em;
+	--font-line-height-tiny: 0.75em;
+
+	--font-family-base: "Roboto", "sans-serif";
+
+	--duration-long: 300ms;
+	--duration-medium: 200ms;
+	--duration-short: 100ms;
+
+	--border-radius: 0.25rem;
+
+	--sticky-yellow: #fff080;
+    --sticky-purple: #e38df2;
+    --sticky-blue: #b1e0f9;
+    --sticky-orange: #ffc040;
+    --sticky-green: #8cc68c;
+}
+
+@keyframes spinAround {
+	from {
+		transform: rotate(0deg);
+  	}
+  	to {
+		transform: rotate(359deg);
+  	}
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg17730"
+   version="1.1"
+   viewBox="0 0 12.69984 12.69984"
+   height="48"
+   width="48">
+  <defs
+     id="defs17724">
+    <linearGradient
+       id="linearGradient13287">
+      <stop
+         style="stop-opacity:1"
+         class="base"
+         id="stop13283"
+         offset="0" />
+      <stop
+         style="stop-opacity:0"
+         class="base"
+         id="stop13285"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(0.74999998,0,0,1,5.0270201,9.3359375e-6)"
+       gradientUnits="userSpaceOnUse"
+       y2="292.5018"
+       x2="8.8193331"
+       y1="292.5018"
+       x1="4.9388266"
+       id="linearGradient13289"
+       xlink:href="#linearGradient13287" />
+  </defs>
+  <metadata
+     id="metadata17727">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-284.29984)"
+     id="layer1">
+    <rect
+       class="base"
+       ry="0.79374933"
+       rx="0.79374003"
+       y="289.59143"
+       x="7.4082398"
+       height="6.3499293"
+       width="4.7624402"
+       id="rect9790"
+       style="opacity:1;fill:url(#linearGradient13289);fill-opacity:1;stroke:none;stroke-width:0.45826602;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       class="base"
+       id="path13277"
+       d="m 4.23328,287.73938 h 3.17496 v 1.05832 l 2.11664,-1.58748 -2.11664,-1.58748 v 1.05832 H 4.23328 Z"
+       style="fill-opacity:0.96428576;fill-rule:evenodd;stroke:none;stroke-width:0.26458001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke-width:0.52916002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect13304"
+       width="5.8207603"
+       height="5.8207622"
+       x="0.79373997"
+       y="289.85602"
+       rx="0.79373997"
+       ry="0.79374933"
+       class="base" />
+  </g>
+</svg>

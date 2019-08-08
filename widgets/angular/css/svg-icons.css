@@ -1,0 +1,184 @@
+.toolbar-dropdown .toolbar-item .icon svg,
+tm-dropdown tm-dropdown-item .icon svg,
+tm-contextmenu tm-contextmenu-item .icon svg,
+tm-navlist-dropdown tm-navlist-dropdown-item .icon svg,
+.properties-container .icon svg,
+.moreGrid .icon svg {
+	height: 1rem;
+	width: 1rem;
+    position: relative;
+    top: 0.15rem;
+}
+
+.button .icon svg {
+	width: 1.25em;
+	height: auto;
+}
+
+.iconRow svg,
+.select-marker svg {
+	width: 1.5rem;
+	height: auto;
+}
+
+.button[disabled] svg {
+	opacity: 0.8;
+}
+
+
+.select-marker svg {
+	position: relative;
+    top: -0.2rem;
+    left: -0.3rem;
+}
+
+tm-tile .image svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+.properties-content label svg {
+	position: relative;
+	top: 0.1rem;
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+svg .base {
+	stroke: var(--color-base);
+	fill: var(--color-base);
+}
+
+.toolbar.is-dark tm-toolbar-button .button.has-icon svg .base,
+.properties-container .properties-header .icon svg .base,
+.select-marker svg .base {
+	stroke: var(--color-light-light);
+	fill: var(--color-light-light);
+}
+
+svg stop.base {
+	stop-color: var(--color-base);
+}
+
+.toolbar-item.is-active>.icon svg .base {
+	stroke: var(--color-light-light);
+	fill: var(--color-light-light);
+}
+
+tm-toggle-button .is-active .icon svg .base,
+tm-radio-button .is-active .icon svg .base {
+	fill: var(--color-primary);
+	stroke: var(--color-primary);
+}
+
+.button.is-danger .icon svg .base,
+.button.is-info .icon svg .base,
+.button.is-success .icon svg .base,
+.button.is-primary .icon svg .base {
+	stroke: var(--color-light-light);
+	fill: var(--color-light-light);
+}
+
+svg stop.base {
+	stop-color: var(--color-base);
+}
+
+.fontlist .indicator svg {
+	height: 1rem;
+	width: 1rem;
+}
+
+.fontlist .indicator.is-success svg .base {
+    stroke: var(--color-success-dark);
+    fill: var(--color-success-dark);
+}
+
+.fontlist .indicator.is-danger svg .base {
+    stroke: var(--color-danger);
+    fill: var(--color-danger);
+}
+
+.fontlist .indicator.is-default svg .base {
+    stroke: var(--color-base);
+    fill: var(--color-base);
+}
+
+svg .light {
+	stroke: var(--color-light-light);
+	fill: var(--color-light-light);
+}
+
+.toolbar.is-dark tm-toolbar-button .button.has-icon svg .light {
+	stroke: var(--color-base);
+	fill: var(--color-base);
+}
+
+
+
+/*.toolbar.is-dark tm-toolbar-button .button.has-icon:hover svg .base {
+	stroke: var(--color-primary-light);
+	fill: var(--color-primary-light);
+}
+*/
+
+svg .info {
+	stroke: var(--color-info-dark);
+	fill: var(--color-info-dark);
+}
+
+.toolbar.is-dark tm-toolbar-button .button.has-icon svg .info {
+	stroke: var(--color-info-light);
+	fill: var(--color-info-light);
+}
+
+svg .warning {
+	stroke: var(--color-warning-dark);
+	fill: var(--color-warning-dark);
+}
+
+.toolbar.is-dark tm-toolbar-button .button.has-icon svg .warning {
+	stroke: var(--color-warning-light);
+	fill: var(--color-warning-light);
+}
+
+svg .success {
+	stroke: var(--color-success-dark);
+	fill: var(--color-success-dark);
+}
+
+.button.is-primary .icon svg .success {
+	stroke: var(--color-success-light);
+	fill: var(--color-success-light);
+}
+
+.toolbar.is-dark tm-toolbar-button .button.has-icon svg .success {
+	stroke: var(--color-success-light);
+	fill: var(--color-success-light);
+}
+
+svg .danger {
+	stroke: var(--color-danger);
+	fill: var(--color-danger);
+}
+
+svg .medium {
+	stroke: var(--color-medium-light);
+	fill: var(--color-medium-light);
+}
+
+.button.is-loading svg .base,
+.button.is-loading svg .success,
+.button.is-loading svg .info,
+.button.is-loading svg .warning,
+.button.is-loading svg .danger {
+	stroke: transparent !important;
+	fill: transparent !important;
+}
+
+svg .custom {
+	fill: url(#linearGradient15386);
+}
+
+.toolbar.is-dark tm-toolbar-button .button.has-icon svg .custom {
+	fill: url(#linearGradient15388);
+}

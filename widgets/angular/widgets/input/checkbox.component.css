@@ -1,0 +1,22 @@
+label {
+    font-weight: 400;
+    color: var(--color-medium);
+}
+
+label.checkbox,
+label.radio {
+    color: var(--color-base);
+}
+
+.checkbox,
+.radio {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.25;
+    position: relative;
+}
+
+.control {
+    font-size: 1rem;
+    text-align: left;
+}

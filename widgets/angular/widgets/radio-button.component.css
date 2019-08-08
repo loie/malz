@@ -1,0 +1,102 @@
+:host:not(:last-child) {
+	margin-right: -1px;
+}
+
+:host:not(:first-child):not(:last-child) .button,
+:host:not(:first-child):not(:last-child) .input,
+:host:not(:first-child):not(:last-child) .select select {
+	border-radius: 0;
+}
+
+:host:first-child .button,
+:host:first-child .input,
+:host:first-child .select select {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+:host:last-child .button,
+:host:last-child .input,
+:host:last-child .select select {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+:host .button:hover,
+:host .button.is-hovered,
+:host .input:hover,
+:host .input.is-hovered,
+:host .select select:hover,
+:host .select select.is-hovered {
+	z-index: 2;
+}
+
+:host .button:focus,
+:host .button.is-focused,
+:host .button:active,
+:host .button.is-active,
+:host .input:focus,
+:host .input.is-focused,
+:host .input:active,
+:host .input.is-active,
+:host .select select:focus,
+:host .select select.is-focused,
+:host .select select:active,
+:host .select select.is-active {
+	z-index: 3;
+}
+
+:host .button:focus:hover, :host .button.is-focused:hover, :host .button:active:hover, :host .button.is-active:hover,
+:host .input:focus:hover,
+:host .input.is-focused:hover,
+:host .input:active:hover,
+:host .input.is-active:hover,
+:host .select select:focus:hover,
+:host .select select.is-focused:hover,
+:host .select select:active:hover,
+:host .select select.is-active:hover {
+	z-index: 4;
+}
+
+:host :host-context(.field.is-grouped) {
+    flex-shrink: 0;
+}
+
+:host:not(:last-child) :host-context(.field.is-grouped) {
+    margin-bottom: 0;
+    margin-right: 0.75rem;
+}
+
+.state {
+    display: inline-block;
+    border-radius: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 1rem;
+}
+
+.button.color-only {
+	margin-right: 0;
+}
+
+.state.square {
+  border-radius: 0;
+}
+
+.state.circle {
+  border-radius: 50%;
+}
+
+.state.sidebar {
+  position: absolute;
+  height: 2.05rem;
+  width: 0.25rem;
+  left: 0;
+  top: 0;
+}
+
+.state.bigrectangle {
+	border-radius: 0.15rem;
+	width: 3rem;
+	height: 1rem;
+}

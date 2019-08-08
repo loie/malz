@@ -1,0 +1,18 @@
+<div class="control" click-stop-propagation>
+	<div class="dropdown" [ngClass]="{'is-active': isOpen, 'is-right': right}">
+		<div class="dropdown-trigger" (click)="openDropdown($event)">
+			<tm-button
+				[loading]="loading"
+				[context]="context"
+				[icon]="icon"
+				[label]="valueLabel">
+			</tm-button>
+		</div>
+		<div *ngIf="isOpen" class="closing-background" (click)="closeDropdown($event)"></div>
+		<div class="dropdown-menu" role="menu">
+		    <div class="dropdown-content">
+		    	<ng-content></ng-content>
+		    </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<span class="icon" *ngIf="icon">
+	<i class="symbol {{ icon }}"></i>
+</span>
+<div class="field">
+	<input
+		class="input"
+		[type]="type"
+		[step]="step"
+		[autocomplete]="autocomplete"
+		[class.is-primary]="context === UIContext.Primary"
+		[class.is-success]="context === UIContext.Success"
+		[class.is-warning]="context === UIContext.Warning"
+		[class.is-danger]="context === UIContext.Danger"
+		[class.is-disabled]="disabled"
+		[attr.readonly]="disabled ? true : null"
+
+		[placeholder]="placeholder"
+		[value]="valueLabel ? valueLabel : initValue"
+		(input)="onInput($event)"
+		(change)="onChange($event)"
+		(keyup)="onKeyUp($event)"
+		>
+	<label>
+		{{ label }}
+		<sup *ngIf="required">*</sup>
+	</label>
+  	<p class="help"
+  		*ngIf="showHelp || actualShowHelp"
+  		[class.is-primary]="context === UIContext.Primary"
+		[class.is-success]="context === UIContext.Success"
+		[class.is-warning]="context === UIContext.Warning"
+		[class.is-danger]="context === UIContext.Danger">{{ help }}</p>
+</div>

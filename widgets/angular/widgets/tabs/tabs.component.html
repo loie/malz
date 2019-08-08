@@ -1,0 +1,15 @@
+<div class="tabs"
+	[class.is-fullwidth]="fullwidth">
+	<ul>
+		<li
+			*ngFor="let tabItem of tabItems"
+			[attr.data-target]="tabItem.title"
+			[class.is-active]="tabItem.active"
+			(click)="selectTab(tabItem)">
+			<a>{{ tabItem.title }}</a>
+		</li>
+    </ul>
+</div>
+<div class="tab-content">
+	<ng-content></ng-content>
+</div>

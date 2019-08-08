@@ -1,0 +1,22 @@
+<nav
+	[class.is-dark]="dark"
+    [class.is-light]="light"
+    [class.has-shadow]="hasShadow"
+    [class.vertical]="vertical"
+	[class.reverse]="reverse"
+	[class.is-small]="small"
+    class="toolbar"
+    role="navigation"
+	aria-label="dropdown navigation"
+>
+     <div class="toolbar-menu"
+        [class.vertical]="vertical"
+        [class.reverse]="reverse">
+    	<div class="toolbar-start" [ngStyle]="{'width': oneitem ? '100%' : 'auto'}">
+    		<ng-content select="tm-toolbar-start"></ng-content>
+    	</div>
+    	<div class="toolbar-end">
+    		<ng-content select="tm-toolbar-end"></ng-content>
+    	</div>
+  	</div>
+</nav>

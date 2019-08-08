@@ -1,0 +1,40 @@
+<a
+	is-button
+	class="button"
+	[attr.disabled]="disabled ? true : null"
+	[attr.href]="target ? target : null"
+	[attr.target]="openinnew ? '_blank': null"
+	[class.is-leftbound]="leftbound"
+	[class.is-loading]="loading"
+	[class.is-primary]="context === UIButtonContext.Primary"
+	[class.is-success]="context === UIButtonContext.Success"
+	[class.is-warning]="context === UIButtonContext.Warning"
+	[class.is-danger]="context === UIButtonContext.Danger"
+	[class.is-link]="context === UIButtonContext.Link"
+	[class.is-minimal]="context === UIButtonContext.Minimal"
+	[class.is-small]="small"
+	[class.is-fullwidth]="fullwidth"
+	[class.is-active]="active"
+	[class.has-color]="color !== undefined"
+	[class.has-label]="label && label.length > 0"
+	[class.has-icon]="icon !== undefined"
+	[class.icon-only]="icon && (!label || label.length === 0)"
+	[class.is-empty]="(!label || label.length === 0) && !icon && !image"
+	[class.stupidbigcolorblock]="markerType === MarkerType.StupidBigColorBlock"
+>
+	<ng-container *ngIf="icon">
+		<span class="icon" [tmInlineSVG]="icon"></span>
+	</ng-container>
+	<span class="image" *ngIf="image">
+		<img src="{{ image }}" style="width: 1.25em;">
+	</span>
+	<span
+		*ngIf="color"
+		class="state"
+		[class.circle]="markerType === MarkerType.Circle"
+		[class.square]="markerType === MarkerType.Square"
+		[class.sidebar]="markerType === MarkerType.Sidebar"
+		[class.bigrectangle]="markerType === MarkerType.BigRectangle"
+		[style.background-color]="color"></span>
+	<span *ngIf="label && label.length > 0" class="label">{{ label }}</span>
+</a>

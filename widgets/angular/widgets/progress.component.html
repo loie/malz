@@ -1,0 +1,11 @@
+<progress
+	class="progress"
+	[class.is-primary]="context === UIButtonContext.Primary"
+	[class.is-light]="context === UIButtonContext.Minimal"
+	[class.is-link]="context === UIButtonContext.Link"
+	[class.is-info]="context === UIButtonContext.Info"
+	[class.is-success]="context === UIButtonContext.Success"
+	[class.is-warning]="context === UIButtonContext.Warning"
+	[class.is-danger]="context === UIButtonContext.Danger"
+	[value]="value"
+	[max]="max"></progress>
